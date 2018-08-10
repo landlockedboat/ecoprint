@@ -1,0 +1,12 @@
+{
+	"soy": 
+	{
+		"water": 10,
+		"electricity": 10
+	},
+	"beef": 
+	{
+		"water": 100,
+		"electricity": 124
+	}
+}
