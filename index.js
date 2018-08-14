@@ -1,69 +1,61 @@
 'use strict';
 
-const products = require("./data/products");
-const units = require("./data/units");
+const products = require('./data/products');
+const units = require('./data/units');
 
 exports.products = products;
 exports.units = units;
 
-function getUnits(productName)
-{
-	var product = products[productName];
-	var units = [];
+function getUnits(productName) {
+	const product = products[productName];
+	const units = [];
 
-	for (var key in product)
-	{
-		units.push(key);
+	for (const key in product) {
+		if (Object.prototype.hasOwnProperty.call(product, key)) {
+			units.push(key);
+		}
 	}
 	return units;
 }
 
-function unitCompare(origin, target, unit)
-{
-	var uOrigin = origin[unit];
-	var uTarget = target[unit];
+function unitCompare(origin, target, unit) {
+	const uOrigin = origin[unit];
+	const uTarget = target[unit];
 
-	var res = 
+	const res =
 		{
-			"difference" : uOrigin - uTarget,
-			"relation" : uTarget / uOrigin
-		}
+			difference: uOrigin - uTarget,
+			relation: uTarget / uOrigin
+		};
 
 	return res;
 }
 
+exports.compare = (originName, targetName, units = []) => {
+	const uOrigin = getUnits(originName);
+	const uTarget = getUnits(targetName);
 
-function footprintCompare(originName, targetName, units = [])
-{
-	var uOrigin = getUnits(originName);
-	var uTarget = getUnits(targetName);
+	let cUnits;
 
-	var cUnits;
-
-	if(units.length == 0)
-	{
+	if (units.length === 0) {
 		cUnits = uOrigin.filter(value =>
 			uTarget.indexOf(value) !== -1);
-	}
-	else
-	{
+	} else {
 		cUnits = units;
 	}
 
-	var res = [];
-	var origin = products[originName];
-	var target = products[targetName];
+	const res = [];
+	const origin = products[originName];
+	const target = products[targetName];
 
-	for(var unitKey in cUnits)
-	{
-		var unit = cUnits[unitKey];
-		var comp = unitCompare(origin, target, unit);
+	for (let i = 0; i < cUnits.length; i++) {
+		const unit = cUnits[i];
+		const comp = unitCompare(origin, target, unit);
 		res.push({
 			unit,
 			comp
 		});
 	}
-	return res;
-}
 
-exports.compare = footprintCompare;
+	return res;
+};

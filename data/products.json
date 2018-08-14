@@ -1,12 +1,88 @@
 {
-	"soy": 
+	"bread":
 	{
-		"water": 10,
-		"electricity": 10
+		"money": 5.12
 	},
-	"beef": 
+	"lamb": 
 	{
-		"water": 100,
-		"electricity": 124
+		"co2": 39.2,
+		"water": 8763
+	},
+	"beef":
+	{
+		"co2": 27.0,
+		"water": 15415,
+		"money": 11.46
+	},
+	"cheese":
+	{
+		"co2": 13.5,
+		"money": 10.7
+	},
+	"pork":
+	{
+		"co2": 12.1,
+		"water": 5988
+	},
+	"turkey":
+	{
+		"co2": 10.9
+	},
+	"chicken":
+	{
+		"co2": 6.9,
+		"water": 4325,
+		"money": 8.53
+	},
+	"tuna":
+	{
+		"co2": 6.1
+	},
+	"egg":
+	{
+		"co2": 4.8,
+		"water": 3265,
+		"money": 3265
+	},
+	"potato":
+	{
+		"co2": 2.9,
+		"water": 387
+	},
+	"rice":
+	{
+		"co2": 2.7,
+		"water": 1644,
+		"money": 3.9
+	},
+	"nut":
+	{
+		"co2": 2.3,
+		"water": 9063
+	},
+	"tofu":
+	{
+		"co2": 2.0,
+		"money": 5.45
+	},
+	"vegetables":
+	{
+		"co2": 2.0,
+		"water": 322
+	},
+	"milk":
+	{
+		"co2": 1.9,
+		"water": 1020,
+		"money": 0.84
+	},
+	"fruit":
+	{
+		"co2": 1.1,
+		"water": 962
+	},
+	"lentil":
+	{
+		"co2": 0.9
 	}
 }

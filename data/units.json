@@ -1,4 +1,5 @@
 {
-	"water": "liters",
-	"electricity": "watts"
+	"water" : "liters",
+	"money" : "USD",
+	"co2"   : "kg"
 }
