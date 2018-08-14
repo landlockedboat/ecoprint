@@ -1,39 +1,39 @@
-# footprint
+# ecoprint
 
 > Measure the ecological footprint of various products
 
 ## Install
 
 ```
-$ npm install footprint
+$ npm install ecoprint
 ```
 
 ## Usage
 
 ```js
-const footprint = require('footprint');
+const ecoprint = require('ecoprint');
 
-footprint['lamb'];
+ecoprint['lamb'];
 //=> { co2: 39.2, water: 8763 }
 
-footprint.compare('tofu', 'tuna');
+ecoprint.compare('tofu', 'tuna');
 //=> [ { unit: 'co2', comp: { difference: -4.1, relation: 3.05 } } ]
 
-footprint.units['water'];
+ecoprint.units['water'];
 //=> 'liters'
 ```
 
 ## API
 
-### footprint.products
+### ecoprint.products
 
-Get an array of all products and their ecological footprint.
+Get an array of all products and their ecological ecoprint.
 
-### footprint.units
+### ecoprint.units
 
 Get an array of all magnitudes to compare and their corresponding units.
 
-### footprint.compare(origin, target)
+### ecoprint.compare(origin, target)
 
 #### origin
 

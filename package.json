@@ -1,9 +1,9 @@
 {
-	"name": "footprint",
+	"name": "ecoprint",
 	"version": "1.0.1",
 	"description": "Measure the ecological footprint of various products",
 	"license": "MIT",
-	"repository": "vikepic/footprint",
+	"repository": "vikepic/ecoprint",
 	"author": {
 		"name": "vikepic",
 		"email": "valcazar96@gmail.com",
