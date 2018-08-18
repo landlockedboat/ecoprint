@@ -1,7 +1,7 @@
 'use strict';
 
-const products = require('./data/products');
-const units = require('./data/units');
+const products = require('./products');
+const units = require('./units');
 
 exports.products = products;
 exports.units = units;
